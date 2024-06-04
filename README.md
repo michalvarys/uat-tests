@@ -1,3 +1,8 @@
+# Jak spustit testy
+- nejdříve je potřeba spustit docker pro grafanu a influxdb `docker-compose up -d influxdb grafana`
+- poté se spustí test pomocí `docker-compose run --rm k6 run /scripts/homepage.js` kde `/scripts/homepage.js` odkazuje na `./script/homepage.js`
+
+
 # docker-k6-grafana-influxdb
 Demonstrates how to run load tests with containerised instances of K6, Grafana and InfluxDB.
 
