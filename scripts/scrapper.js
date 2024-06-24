@@ -41,8 +41,9 @@ export function setup() {
     check(response, {
         "scrap was successful": (r) => {
             checkHpLoad(true)
-            return r.status === 200
-        }
+            return r.success
+        },
+        "scrap was not successful": (r) => !r.success
     })
 }
 
